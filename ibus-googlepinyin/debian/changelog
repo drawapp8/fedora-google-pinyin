@@ -1,0 +1,12 @@
+ibus-googlepinyin (0.1.1-2) unstable; urgency=low
+
+  * Work with libgooglepinyin0:
+    move dict to /usr/lib/${multi_arch_triplet} (Closes: #646958).
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Sat, 19 Nov 2011 16:07:01 +0800
+
+ibus-googlepinyin (0.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #640970).
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Fri, 09 Sep 2011 11:50:14 +0800

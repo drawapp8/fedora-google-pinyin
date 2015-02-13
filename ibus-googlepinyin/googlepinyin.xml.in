@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- filename: googlepinyin.xml -->
+<component>
+	<name>org.freedesktop.IBus.GooglePinyin</name>
+	<description>GooglePinyin Component</description>
+	<exec>@IBUS_GOOGLEPINYIN_PKGDATADIR@/main.py --ibus</exec>
+	<version>@IBUS_GOOGLEPINYIN_VERSION@</version>
+	<author>Jiahua Huang &lt;jhuangjiahua@gmail.com&gt;</author>
+	<license>GPL</license>
+	<homepage>http://code.google.com/p/libgooglepinyin</homepage>
+	<textdomain>ibus-googlepinyin</textdomain>
+
+	<!-- for static engines -->
+	<engines>
+		<engine>
+			<name>googlepinyin</name>
+			<language>zh_CN</language>
+			<license>GPL</license>
+			<author>Jiahua Huang &lt;jhuangjiahua@gmail.com&gt;</author>
+			<icon>@IBUS_GOOGLEPINYIN_PKGDATADIR@/icons/ibus-googlepinyin.png</icon>
+			<layout>us</layout>
+			<longname>GooglePinyin</longname>
+			<description>GooglePinyin Input Method</description>
+			<rank>99</rank>
+		</engine>
+	</engines>
+</component>

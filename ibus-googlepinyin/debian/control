@@ -1,0 +1,20 @@
+Source: ibus-googlepinyin
+Section: utils
+Priority: optional
+Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+DM-Upload-Allowed: yes
+Uploaders: YunQiang Su <wzssyqa@gmail.com>
+Build-Depends: debhelper (>= 8), cmake, python (>= 2.6.6-3~)
+Standards-Version: 3.9.2
+Homepage: http://code.google.com/p/libgooglepinyin/
+Vcs-Git: git://git.debian.org/pkg-ime/ibus-googlepinyin.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/ibus-googlepinyin.git
+
+Package: ibus-googlepinyin
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, libgooglepinyin0, libopencc1, ibus
+Description: googlepinyin engine for ibus
+ libgooglepinyin is a fork of Google Pinyin on Android, it features
+ to have excellent input experience and uses little resource.
+ .
+ This package is for IBus to use libgooglepinyin.

@@ -1,0 +1,17 @@
+Index: ibus-googlepinyin-0.1.1/googlepinyin.py
+===================================================================
+--- ibus-googlepinyin-0.1.1.orig/googlepinyin.py	2011-11-19 15:44:26.000000000 +0800
++++ ibus-googlepinyin-0.1.1/googlepinyin.py	2011-11-19 16:01:43.515089161 +0800
+@@ -13,8 +13,11 @@
+ libc = ctypes.CDLL("libc.so.6")
+ ime_pinyin = ctypes.CDLL(ctypes.util.find_library('googlepinyin'), use_errno=True)
+ 
++multi_arch_triplet_run=os.popen("dpkg-architecture -qDEB_HOST_MULTIARCH")
++multi_arch_triplet=multi_arch_triplet_run.read().rstrip()
+ _a = lambda path: os.path.exists(path) and path or ""
+-FN_SYS_DICT = _a('/usr/share/googlepinyin/dict_pinyin.dat')\
++FN_SYS_DICT = _a('/usr/lib/'+multi_arch_triplet+'/googlepinyin/data/dict_pinyin.dat')\
++           or _a('/usr/share/googlepinyin/dict_pinyin.dat')\
+            or _a('/usr/local/share/googlepinyin/dict_pinyin.dat')
+ FN_USR_DICT = os.path.expanduser('~/.config/ibus/googlepinyin/userdict_pinyin.dat')
+ 
